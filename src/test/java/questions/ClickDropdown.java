@@ -1,14 +1,11 @@
 package questions;
-
 import pageObject.HomePage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
-
 
 public class ClickDropdown {
     private WebDriver driver;
@@ -22,28 +19,78 @@ public class ClickDropdown {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
     @Test
-    public void checkAllText() {
+    public void testQuestion1(){
         HomePage mainPage = new HomePage(driver);
-        mainPage.open(); // открытие ссылки
-        mainPage.clickCookie(); // закрываем куки
-        mainPage.scrollHowMuch(); // скролл
-        mainPage.clickHowMuch(); // кликаем вопрос "Сколько это стоит? И как оплатить?"
+        mainPage.open();
+        mainPage.clickCookie();
+        mainPage.scrollHowMuch();
+        mainPage.clickHowMuch();
         mainPage.isAnswerHowMuch();
-        mainPage.clickWantSeveralScooters(); //кликаем вопрос "Хочу сразу несколько самокатов! Так можно?"
+    }
+    @Test
+    public void testQuestion2(){
+        HomePage mainPage = new HomePage(driver);
+        mainPage.open();
+        mainPage.clickCookie();
+        mainPage.scrollHowMuch();
+        mainPage.clickWantSeveralScooters();
         mainPage.isAnswerSeveralScooters();
-        mainPage.clickHowRentalTimeCalculated(); //кликаем вопрос "Как рассчитывается время аренды?"
+    }
+    @Test
+    public void testQuestion3(){
+        HomePage mainPage = new HomePage(driver);
+        mainPage.open();
+        mainPage.clickCookie();
+        mainPage.scrollHowMuch();
+        mainPage.clickHowRentalTimeCalculated();
         mainPage.isAnswerHowRentalTimeCalculated();
-        mainPage.clickTodayOrder(); //кликаем вопрос "Можно ли заказать самокат прямо на сегодня?"
+    }
+    @Test
+    public void testQuestion4(){
+        HomePage mainPage = new HomePage(driver);
+        mainPage.open();
+        mainPage.clickCookie();
+        mainPage.scrollHowMuch();
+        mainPage.clickTodayOrder();
         mainPage.isAnswerTodayOrder();
-        mainPage.clickExtendOrder(); //кликаем вопрос "Можно ли продлить заказ или вернуть самокат раньше?"
+    }
+    @Test
+    public void testQuestion5(){
+        HomePage mainPage = new HomePage(driver);
+        mainPage.open();
+        mainPage.clickCookie();
+        mainPage.scrollHowMuch();
+        mainPage.clickExtendOrder();
         mainPage.isAnswerExtendOrder();
-        mainPage.clickCharging(); //кликаем вопрос "Вы привозите зарядку вместе с самокатом?"
+    }
+    @Test
+    public void testQuestion6(){
+        HomePage mainPage = new HomePage(driver);
+        mainPage.open();
+        mainPage.clickCookie();
+        mainPage.scrollHowMuch();
+        mainPage.clickCharging();
         mainPage.isAnswerCharging();
-        mainPage.clickCanOrderCancellation(); //кликаем вопрос "Можно ли отменить заказ?"
+    }
+    @Test
+    public void testQuestion7(){
+        HomePage mainPage = new HomePage(driver);
+        mainPage.open();
+        mainPage.clickCookie();
+        mainPage.scrollHowMuch();
+        mainPage.clickCanOrderCancellation();
         mainPage.isAnswerCanOrderCancellation();
-        mainPage.clickLiveOutsideMoscow(); //кликаем вопрос "Я жизу за МКАДом, привезёте?"
+    }
+    @Test
+    public void testQuestion8(){
+        HomePage mainPage = new HomePage(driver);
+        mainPage.open();
+        mainPage.clickCookie();
+        mainPage.scrollHowMuch();
+        mainPage.clickLiveOutsideMoscow();
         mainPage.isAnswerLiveOutsideMoscow();
     }
+
     @After
     public void teardown() {
         driver.quit(); //Закрываем браузер
